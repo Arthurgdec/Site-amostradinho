@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+ @import url('https://fonts.cdnfonts.com/css/bleach');
 
 
 :root {
@@ -59,6 +60,7 @@ section {
 
 .esquerda-conteudo {
     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
@@ -104,12 +106,14 @@ section {
 
 
 h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Bleach', sans-serif;
     font-style: normal;
-    color: var(--laranja-claro);
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:#0011ff;
+    font-size: 150px;
 }
-
 #galeria {
     background-color: #1f1f1f;
 
@@ -121,15 +125,21 @@ h2 {
 }
 
 #contato {
-    background-image: url('img/4965007.jpg');
+    background-image: url('img/8yooz00dyb3c1.webp');
     background-size: cover;
     padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
+    border-radius: var(--bs-border-radius-xxl) !important;
+        /* Espaçamento interno para a seção de contato */
 
 }
 
 .formulario {
     background-color: #3d3d3d;
+    opacity: 0.9;
+}
+
+.formulario {
+    
     padding: 2rem;
     /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
@@ -140,12 +150,12 @@ h2 {
 }
 
 .formulario button {
-    background-color: #CB6D43;
+    background-color: #0011ff;
     border: none;
     font-weight: bold;
 }
 
 /* chama classe do bootstrap para modificar a cor */
 .form-control {
-    background-color: #3d3d3d;
+    background-color: #ffffff;
 }

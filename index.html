@@ -13,14 +13,23 @@
 
 <body>
     <header class=" p-5">
-
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo.png" alt="Logotipo da Tropicália" class="nav-img " loading="lazy">
+               <nav class="container d-flex justify-content-between align-items-center">
+            <img src="img/BLEACHBRANCO-Photoroom.png" alt="Logotipo da Tropicália" class="nav-img" loading="lazy">
             <ul class="nav mt-5">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>          
+            </ul>
+                <button id="botao-acessibilidade" class="btn btn-primary fw-bold">acessibilidade</button>
+                <div id="opcoes-acessibilidade">
+                  <button id="aumentar-fonte" class="btn btn-primary fw-bold">+</button>
+                  <button id="diminuir-fonte" class="btn btn-primary fw-bold">-</button>
+                  <button id="resetar-fonte" class="btn btn-primary fw-bold" aria-label="Tamanho-original">/</button>
+
+                </div>
+              </div>
+              
+
         </nav>
        
     </header>
@@ -46,11 +55,14 @@
             <div class="container d-flex align-items-center ">
                   <div class="col-5">
                     <h2>O que é BLEACH?</h2>
-                    <p class="p-2 text-white">A Tropicália, também conhecida como Tropicalismo, foi um movimento cultural
-                        brasileiro que surgiu na década de 1960, tendo seu auge entre 1967 e 1968. Esse movimento
-                        abrangeu várias expressões artísticas, como a música, o cinema, o teatro e as artes plásticas, e
-                        teve como principal característica a mistura de elementos da cultura brasileira tradicional com
-                        influências estrangeiras, especialmente do rock e da música pop.</p>
+                    <p class="p-2 text-white">Bleach é um popular anime e mangá criado por Tite Kubo. A história segue 
+                        Ichigo Kurosaki, um adolescente que, por acidente, ganha poderes de Shinigami (Ceifeiro de Almas) após encontrar 
+                        Rukia Kuchiki, uma Shinigami encarregada de proteger os vivos de espíritos malignos conhecidos como Hollows. 
+                        Com seus novos poderes, Ichigo assume a responsabilidade de proteger sua cidade e os seres humanos dos Hollows, 
+                        enquanto ajuda almas perdidas a seguir para o mundo espiritual, conhecido como Soul Society.
+                        Conforme a trama avança, Ichigo e seus amigos se envolvem em batalhas épicas, descobrem segredos sombrios sobre o Soul Society 
+                        e enfrentam inimigos poderosos, como o traidor Aizen Sousuke e o grupo de Quincy liderado por Yhwach. A série combina ação intensa, 
+                        desenvolvimento de personagens e um rico universo espiritual, explorando temas como amizade, dever e a luta entre o bem e o mal.</p>
                 </div>
             </div>
         </section>
@@ -65,8 +77,11 @@
                             class="img-fluid rounded-5" loading="lazy">
                     </div>
                     <div class="col-md-4">
-                        <img src="./img/murcielago7404.png" class="img-fluid rounded-5"
-                            loading="lazy">
+                        <img src="./img/murcielago7404.png" alt="Ulquiorra Cifer é um dos antagonistas principais do anime e mangá Bleach. Ele é um dos Espada, um grupo de poderosos Hollows humanoides que servem ao vilão Aizen Sousuke. Ulquiorra ocupa a posição de Cuarta Espada (4ª mais forte), e seu número é tatuado em seu corpo, simbolizando sua classificação.
+
+                        Conhecido por sua personalidade fria, analítica e filosófica, Ulquiorra representa a nulidade e acredita que a existência humana é insignificante. Ele é um dos poucos Espada capazes de alcançar uma segunda forma de Resurrección (liberação de poder), chamada Segunda Etapa, que o torna extremamente poderoso e quase invencível." class="img-fluid rounded-5"
+                            loading="lazy" onmouseover="lerAlt(this)"
+                            >
                     </div>
                 </div>
             </div>
@@ -106,10 +121,23 @@
         <i class="bi bi-whatsapp"></i>
         <i class="bi bi-instagram"></i>
         <i class="bi bi-tiktok"></i>
-        <p class="mt-3 text-white">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
+        <p class="mt-3 text-white">Desenvolvido por Eu e Leonardo Celestado.</p>
     </footer>
     <script src="script.js"></script>
-
+    <script>
+        function lerAlt(imagem) {
+          // Verifica se a API de síntese de fala está disponível no navegador
+          if ('speechSynthesis' in window) {
+            const texto = imagem.alt; // Pega o texto do atributo alt
+            const utterance = new SpeechSynthesisUtterance(texto); // Cria uma instância de fala
+            utterance.lang = 'pt-BR'; // Define o idioma para português do Brasil
+            window.speechSynthesis.speak(utterance); // Faz a voz falar o texto
+          } else {
+            alert('Seu navegador não suporta síntese de fala.');
+          }
+        }
+      </script>
+    
 </body>
 
 </html>

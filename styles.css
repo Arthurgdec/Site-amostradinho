@@ -4,7 +4,7 @@
 
 
 :root {
-    --laranja-claro: #0011ff;
+    --laranja-claro: #ff6738;
     border-radius: 20%;
 }
 
@@ -23,6 +23,9 @@ header {
  background: linear-gradient(#3d3d3d,  #1f1f1f);
 
 }
+.alto-contraste header{
+    background: linear-gradient(#353535,  #0c0c0c);
+}
 
 
 section {
@@ -38,13 +41,52 @@ body {
     color: white;
 }
 
+:root {
+    --laranja-claro: #ff6738;
+    --link: #fa5523;
+    --alto-contraste-fundo: #0c0c0c;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: #00eeff;
+    --alto-contraste-borda: #0090d3;
+    --alto-contraste-sombra: #fa5523;
+
+}
 .menu-acessibilidade{
     position: fixed;
     top:2rem;
     right:20px;
     z-index: 1000;
 }
+.alto-contraste{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+    
+}
+.alto-contraste .display-4 {
+    text-shadow: -5px 5px var(--alto-contraste-sombra);
 
+}
+.alto-contraste h2 {    -webkit-text-stroke-color: var(--alto-contraste-borda);
+    -webkit-text-stroke-width: 4px;
+}
+.alto-contraste .botao-inicio{
+color: #0c0c0c;
+}
+.alto-contraste .formulario{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+.alto-contraste #tropicalia {
+    
+}
 .rotacao-botao{
     transform: rotate(-90deg);
     transform-origin: right center;
@@ -71,17 +113,19 @@ body {
 
 .inicio-fundo {
     /* aula 3 */
-    background-image: url('img/bleach-background-5v0421zsg8hk5vgp.jpg');
+    background-image: 
+    url('img/nEdjjB9-QmYr6y99INRSvttOaZ539_gEayDfUw1b2x0.webp');
+    filter: brightness(80%);
     /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
-    border-radius: 80px;
+    border-radius: 30px;
     width: 100%;
     height: 606px;
     padding: 40px;
     margin: 0 auto;
 }
-
+.imagem-transparente{opacity: 1;}
 /* posicionamento para a imagem à direita */
 .img-inicio {
     position: absolute;
@@ -103,14 +147,24 @@ body {
 
 .botao-inicio {
     background-color: var(--laranja-claro);
-    border-radius: 30px;
-    border: none;
-    width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
-    height: 3em;
-    /* Convertido para em */
-    align-content: center;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none; /* Remove borda se houver */
+    outline: none; /* Remove outline padrão */
+    transition: background-color 0.3s;
+    padding: 10px 20px; /* Ajuste conforme necessário */
+}
 
+.botao-inicio:hover {
+    background-color: #fa5523;
+}
+
+.botao-inicio:focus {
+    box-shadow: 0 0 0 3px rgba(255, 103, 56, 0.5); /* Sombra laranja no foco */
+}
+
+.botao-inicio:active {
+    background-color: #e04e1a !important; /* Cor mais escura ao clicar */
 }
 
 .display-4 {
@@ -145,7 +199,7 @@ h2 {
     font-style: normal;
     color: rgb(255, 255, 255);
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color:#0011ff;
+    -webkit-text-stroke-color:#ff501b;
     font-size: 150px;
 }
 #galeria {
@@ -184,7 +238,7 @@ h2 {
 }
 
 .formulario button {
-    background-color: #0011ff;
+    background-color: #ff6738;
     border: none;
     font-weight: bold;
 }

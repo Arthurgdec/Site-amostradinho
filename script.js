@@ -34,5 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carregar tamanho salvo
     const savedSize = localStorage.getItem('fontSize');
     if (savedSize) setFontSize(parseInt(savedSize));
-    
+    const alternaContraste = document.getElementById('alterna-contraste')
+    alternaContraste.addEventListener('click', function(){
+        document.body.classList.toggle('alto-contraste')
+})
 });

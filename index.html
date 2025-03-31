@@ -20,11 +20,16 @@
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
             </ul>
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold">acessibilidade</button>
-                <div id="opcoes-acessibilidade">
-                  <button id="aumentar-fonte" class="btn btn-primary fw-bold">+</button>
-                  <button id="diminuir-fonte" class="btn btn-primary fw-bold">-</button>
-                  <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"> <i class="bi bi-shadows"></i></button>
+            <div id="acessibilidade" class="menu-acessibilidade">
+                <button id="botao-acessibilidade" class="btn btn-primary fw-bold
+                rotacao-botao" aria-expanded="false">Acessibilidade</button>
+                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar
+                    o tamanho da fonte">A+</button>
+                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="diminuir
+                    o tamanho da fonte">A-</button>
+                    <button id="alterna-contraste" class="btn btn-primary fw-bold"> <i class="bi
+                    bi-shadows"></i></button>
                   <button id="resetar-fonte" class="btn btn-primary fw-bold" aria-label="Tamanho-original">/</button>
 
                 </div>
@@ -55,7 +60,7 @@
             </div>
         </section>
 
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
+        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia" tabindex="0">
             <div class="container d-flex align-items-center ">
                   <div class="col-5">
                     <h2>O que é BLEACH?</h2>
@@ -71,7 +76,7 @@
             </div>
         </section>
 
-        <section id="galeria">
+        <section id="galeria" tabindex="0">
             <h2 class="text-center pt-5 text-white">Galeria</h2>
             <div class="container p-3 mt-3 fundo-galeria ">
 
@@ -97,7 +102,7 @@
             </div>
         </section>
 
-        <section id="contato">
+        <section id="contato" tabindex="0">
             <div class="container p-5 d-flex justify-content-center">
                 <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
                     <h2 class="mb-3 text-white">Entre em contato</h2>
@@ -131,9 +136,10 @@
         <i class="bi bi-whatsapp"></i>
         <i class="bi bi-instagram"></i>
         <i class="bi bi-tiktok"></i>
-        <p class="mt-3 text-white">Desenvolvido por Eu e Leonardo Celestado.</p>
+        <p class="mt-3 text-white">Desenvolvido por Arthur & Leonardo.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
     <script>
         function lerAlt(imagem) {
           // Verifica se a API de síntese de fala está disponível no navegador

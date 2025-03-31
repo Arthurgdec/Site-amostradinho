@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const defaultSize = 16;
     const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
     const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
+    const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+    botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
 
     botaoDeAcessibilidade.addEventListener('click', function (){
         botaoDeAcessibilidade.classList.toggle('rotacao-botao');
@@ -38,4 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     alternaContraste.addEventListener('click', function(){
         document.body.classList.toggle('alto-contraste')
 })
+
+ScrollReveal().reveal('#inicio', { delay: 300 });
+ScrollReveal().reveal('#tropicalia', { delay: 300 });
+ScrollReveal().reveal('#galeria', { delay: 300 });
+ScrollReveal().reveal('#contato', { delay: 800 });
 });
